@@ -30,7 +30,7 @@ router.get('/seed', (req, res) => {
                 console.log(error);
             } else {
                 console.log(`${posts} has been added`);
-                res.redirect('/home')
+                res.redirect('/weddit')
             }
         }
     )
