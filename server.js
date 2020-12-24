@@ -16,7 +16,7 @@ app.use(methodOverride('_method'))
 
 
 const controller = require('./controllers/router.js')
-app.use('/home', controller);
+app.use('/weddit', controller);
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
