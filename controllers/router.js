@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/posts.js')
-const Posts = require('../models/seed.js')
+const foodPosts = require('../models/seed.js')
 
 
 
