@@ -20,7 +20,7 @@ router.get('/foods', (req, res) => {
 })
 
 router.get('/seed', (req, res) => {
-    post.create(foodPosts, (error, posts) => {
+    Post.create(foodPosts, (error, posts) => {
         if (error) {
             console.log(error);
         }
