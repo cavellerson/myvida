@@ -26,6 +26,7 @@ router.get('/seed', (req, res) => {
         }
         else {
             console.log(`${posts} have been added`);
+            res.redirect('/gtgv')
         }
     })
 })
