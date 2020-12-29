@@ -4,7 +4,7 @@ const Post = require('../models/posts.js')
 
 
 
-router.get('index.ejs', (req, res) => {
+router.get('', (req, res) => {
     res.render('index.ejs')
 })
 
