@@ -19,7 +19,9 @@ app.use(methodOverride('_method'))
 const controller = require('./controllers/router.js')
 app.use('/gtgv', controller);
 
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(
+    MONGODB_URI,
+{
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
