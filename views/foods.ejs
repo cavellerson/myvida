@@ -6,7 +6,9 @@
     </head>
     <body>
         <h1>Foods</h1>
-        <%=allPosts%>
+        <% for (let post of allPosts) { %>
+            <%=post.title%>
+        <% } %>
 
     </body>
 </html>
