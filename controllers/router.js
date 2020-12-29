@@ -9,20 +9,20 @@ router.get('', (req, res) => {
     res.render('index.ejs')
 })
 
-// router.get('/seed', (req, res) => {
-//     Post.create(
-//         Posts,
-//         (error, posts) => {
-//             if (error) {
-//                 console.log(error);
-//             }
-//             else {
-//                 console.log(`${Posts} have been created`);
-//                 res.redirect('')
-//             }
-//         }
-//     )
-// })
+router.get('/seed', (req, res) => {
+    Post.create(
+        Posts,
+        (error, posts) => {
+            if (error) {
+                console.log(error);
+            }
+            else {
+                console.log(`${Posts} have been created`);
+                res.redirect('')
+            }
+        }
+    )
+})
 
 
 
