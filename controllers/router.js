@@ -19,6 +19,16 @@ router.get('/foods', (req, res) => {
     })
 })
 
+router.get('/seed', (req, res) => {
+    Post.create(foodPosts, (error, posts) => {
+        if (error) {
+            console.log(error);
+        }
+        else {
+            console.log(`${posts} have been added`);
+        }
+    })
+})
 
 
 
