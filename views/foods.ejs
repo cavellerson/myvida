@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Foods</h1>
+        <% for (let post of foodPosts) { %>
+                <h1><%=post.title%></h1>
+                <h2><%=post.description%></h2>
+                <img src="<%=post.img%>" alt="food-image">
+                <h3><%=post.tags%></h3>
+        <% } %>
+    </body>
+</html>
