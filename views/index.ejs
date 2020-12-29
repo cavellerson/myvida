@@ -6,6 +6,9 @@
     </head>
     <body>
         <h1>Welcome to Good Times & Good Vibes</h1>
-
+        <% for (let post of posts) { %>
+            <h1><%=post.title%></h1>
+            <img src="<%=post.img%>" alt="post-image">
+        <% } %>
     </body>
 </html>
