@@ -9,7 +9,7 @@ router.get('', (req, res) => {
     res.render('index.ejs')
 })
 
-router.get('', (req, res) => {
+router.get('/foods', (req, res) => {
     res.render('foods.ejs')
 })
 
