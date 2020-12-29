@@ -14,7 +14,7 @@ module.exports = [
     {
         title: "Sushi is my fav",
         description: "",
-        img: "shorturl.at/chBFO".
+        img: "shorturl.at/chBFO",
         tag: "food"
     }
 ]
