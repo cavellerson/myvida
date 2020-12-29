@@ -10,11 +10,13 @@ router.get('', (req, res) => {
 })
 
 router.get('/foods', (req, res) => {
-    res.render('foods.ejs',
-        {
-            foodPosts: foodPosts,
-        }
-    )
+    Post.find({}, (error, allPosts) => {
+        res.render('foods.ejs',
+            {
+                posts: allPosts
+            }
+        )
+    })
 })
 
 router.get('/seed', (req, res) => {
