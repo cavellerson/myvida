@@ -23,13 +23,13 @@ router.get('/seed', (req, res) => {
             console.log(error);
         }
         else {
-            console.log(`${posts has been added}`);
+            console.log(`${posts} has been added`);
             res.redirect('')
         }
     })
 })
 
-
+console.log(foodPosts);
 
 
 
