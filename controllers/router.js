@@ -5,7 +5,7 @@ const foodPosts = require('../models/seed.js')
 
 
 
-router.get('', (req, res) => {
+router.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
