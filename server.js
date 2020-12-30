@@ -19,6 +19,10 @@ app.use(methodOverride('_method'))
 const controller = require('./controllers/router.js')
 app.use('/gtgv', controller);
 
+app.get('/', (req, res) => {
+    res.redirect('/gtgv');
+})
+
 mongoose.connect(
     MONGODB_URI,
 {
