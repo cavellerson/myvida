@@ -29,6 +29,7 @@ router.get('/seed', (req, res) => {
             res.redirect('/foods')
         }
     })
+
 })
 
 // Post.insert(foodPosts, (error, posts) => {
