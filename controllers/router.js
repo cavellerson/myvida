@@ -32,6 +32,7 @@ router.get('/seed', (req, res) => {
 
 })
 
+
 // Post.insert(foodPosts, (error, posts) => {
 //     if (error) {
 //         console.log(error);
