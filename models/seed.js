@@ -3,7 +3,7 @@ module.exports = [
         title: "Rigatoni Alla Vodka for lunch:)",
         description: "",
         img: "https://scontent-lga3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/130928539_208210437564376_4689982508744768889_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com&_nc_cat=104&_nc_ohc=LOvXtj8WjRcAX9glkn1&tp=1&oh=d2465c769c4a0b09e9613a085c04532d&oe=600FE064",
-        tag: "food"
+        tag: "#pasta #rigatoni"
     },
     {
         title: "Froyo",

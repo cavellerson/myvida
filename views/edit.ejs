@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+            <form action="/gtgv/foods/<%=post.id%>?_method=PUT" method="POST">
+                <fieldset>
+                    <legend>Edit Post</legend>
+                    <br>
+                    <legend>Title</legend>
+                    <input type="text" name="title" placeholder="<%=post.title%>">
+                    <legend>Description</legend>
+                    <input type="text" name="description"
+                    placeholder="<%=post.description%>">
+                    
+                    <legend>Tags</legend>
+                    <input type="text" name="tag" placeholder="<%=post.tag%>">
+
+                    <input type="submit" name="" value="Done Editing">
+                </fieldset>
+
+            </form>
+    </body>
+</html>
