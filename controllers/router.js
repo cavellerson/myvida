@@ -26,7 +26,7 @@ router.get('/seed', (req, res) => {
         }
         else {
             console.log(`${posts} have been added`);
-            res.redirect('/gtgv/foods')
+            res.redirect('/ml/foods')
         }
     })
 
@@ -43,7 +43,7 @@ router.post('/foods', (req, res) => {
         }
         else {
             console.log(`${newPost} has been added`);
-            res.redirect('/gtgv/foods')
+            res.redirect('/ml/foods')
         }
     })
 })
@@ -71,14 +71,14 @@ router.get('/foods/:id/edit', (req, res) => {
 
 router.put('/foods/:id', (req, res) => {
     Post.findByIdAndUpdate(req.params.id, {$set: {title:req.body.title, description: req.body.description, tag: req.body.tag }}, {new: true}, (error, updatePost) => {
-        res.redirect('/gtgv/foods')
+        res.redirect('/ml/foods')
     })
 })
 
 
 router.delete('/foods/:id', (req, res) => {
     Post.findByIdAndRemove(req.params.id, (error, data) => {
-        res.redirect('/gtgv/foods');
+        res.redirect('/ml/foods');
     })
 })
 

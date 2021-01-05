@@ -3,13 +3,44 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link href="/stylesheet.css" rel="stylesheet" type="text/css">
+        <style media="screen">
+            .picture {
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+            }
+            .picture>img {
+                width: 50%;
+                margin: auto;
+            }
+            .picture>a {
+                display: flex;
+                justify-content: center;
+                margin-left: 45%;
+                margin-top: 1%;
+            }
+        </style>
+
     </head>
     <body>
-        <h1><%=post.title%></h1>
-        <img src="<%=post.img%>" alt="post-image">
-        <p><%=post.description%></p>
-        <h3><%=post.tag%></h3>
-        <a href="/gtgv/foods/<%=post.id%>/edit">Edit me</a>
-        <a href="/gtgv/foods">Foods</a>
+        <div class="main-content">
+            <h1><%=post.title%></h1>
+
+                <div class="picture">
+                    <img src="<%=post.img%>" alt="post-image">
+                    <a href="/ml/foods/<%=post.id%>/edit"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+                </div>
+
+
+
+
+            <p><%=post.description%></p>
+            <h3><%=post.tag%></h3>
+            <a href="/ml/foods"><ion-icon name="apps-sharp"></ion-icon></a>
+        </div>
+
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </body>
 </html>

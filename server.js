@@ -17,10 +17,10 @@ app.use(methodOverride('_method'))
 
 
 const controller = require('./controllers/router.js')
-app.use('/gtgv', controller);
+app.use('/ml', controller);
 
 app.get('/', (req, res) => {
-    res.redirect('/gtgv');
+    res.render('./LogoPage.ejs');
 })
 
 mongoose.connect(
