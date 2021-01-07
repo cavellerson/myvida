@@ -5,6 +5,12 @@
         <title></title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link href="/stylesheet.css" rel="stylesheet" type="text/css">
+        <style media="screen">
+        .btn, btn-outline-light {
+            margin: .5em 0 0 0;
+        }
+
+        </style>
     </head>
     <body>
         <div class="border border-2">
@@ -20,13 +26,17 @@
                     Tags: <input type="text" name="tag" placeholder="tags">
                     <br>
 
-                    <input type="submit" name="" value="Create">
+                    <a  class="btn btn-outline-danger" href="/ml/foods/">Cancel</a>
+
+                    <input type="submit" name="" class="btn btn-outline-success" value="Create">
                 </form>
                     <a href="/ml/foods" class="btn btn-outline-light">Home</a>
+
 
             </div>
         </div>
 
+        <%- include ('./partials/footer.ejs') %>
 
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 

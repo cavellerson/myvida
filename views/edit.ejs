@@ -10,6 +10,9 @@
                 height: 100%;
                 width: 100%;
             }
+            .btn, btn-outline-light {
+                margin: .5em;
+            }
         </style>
     </head>
     <body>
@@ -27,15 +30,19 @@
                     <br>
                     <legend>Tags</legend>
                     <input type="text" name="tag" placeholder="<%=post.tag%>">
-
-                    <input type="submit" name="" value="Post">
+                    <br>
+                    <a  class="btn btn-outline-danger" href="/ml/foods/<%=post.id%>">Cancel</a>
+                    <input type="submit" name="" class="btn btn-outline-success" value="Done">
 
                 </fieldset>
 
             </form>
+
             <a href="/ml/foods"><ion-icon name="apps-sharp"></ion-icon></a>
 
         </div>
+        <%- include ('./partials/footer.ejs') %>
+
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
     </body>

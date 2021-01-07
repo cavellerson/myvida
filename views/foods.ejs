@@ -16,7 +16,7 @@
 
             body {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
             }
             .left {
@@ -26,55 +26,88 @@
                 margin: 3em 0 3em 0;
             }
             .nav,flex-column {
-                margin: 8em 0 0 3em;
+            height: 50%;
+            margin: 0 0 0 1em;
+            margin-top: 25%;
+            max-width: 8%;
+
+            }
+            .Top {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: auto;
+            }
+            .bottom {
+
+                justify-content: center;
+                flex-direction: row;
             }
 
 
+
+
+            .Socials {
+                width: 50%;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+            }
 
         </style>
     </head>
 
     <body>
 
-        <div class="left">
-            <h1>Foods</h1>
-            <div class="main-content">
+        <div class="Top">
+            <div class="left">
+                <h1>Foods</h1>
+                <div class="main-content">
 
 
 
-                    <% for (let post of allPosts) { %>
+                        <% for (let post of allPosts) { %>
 
-                        <div class="food-posts">
-                            <h1><%=post.title%></h1>
-
-
-                                <div class="foods-pictures">
-                                    <a href="/ml/foods/<%=post._id%>">
-                                        <img src="<%=post.img%>" alt="">
-                                    </a>
-                                    <a href="/ml/foods/<%=post.id%>/edit"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
-                                </div>
+                            <div class="food-posts">
+                                <h1><%=post.title%></h1>
 
 
+                                    <div class="foods-pictures">
+                                        <a href="/ml/foods/<%=post._id%>">
+                                            <img src="<%=post.img%>" alt="">
+                                        </a>
+                                        <a href="/ml/foods/<%=post.id%>/edit"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></a>
+                                    </div>
 
 
-                            <p><%=post.description%></p>
-                            <h3><%=post.tag%></h3>
-                            <form action="/ml/foods/<%=post._id%>?_method=DELETE" method="POST">
-                                <input type="submit" name="" class="btn btn-outline-danger" value="Delete">
-                            </form>
-                        </div>
-                    <% } %>
 
 
+                                <p><%=post.description%></p>
+                                <h3><%=post.tag%></h3>
+                                <form action="/ml/foods/<%=post._id%>?_method=DELETE" method="POST">
+                                    <input type="submit" name="" class="btn btn-outline-danger" value="Delete">
+                                </form>
+                            </div>
+                        <% } %>
+
+
+                </div>
             </div>
+
+
+            <div class="nav flex-column">
+                <a class="btn btn-outline-light" href="/ml/">Home</a>
+
+                <a class="btn btn-outline-light" href="/ml/foods/newPost">New Post</a>
+            </div>
+
         </div>
 
 
-        <div class="nav flex-column">
-            <a class="btn btn-outline-light" href="/ml/">Home</a>
+        <div class="bottom">
+            <%- include ('./partials/footer.ejs') %>
 
-            <a class="btn btn-outline-light" href="/ml/foods/newPost">New Post</a>
         </div>
 
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
